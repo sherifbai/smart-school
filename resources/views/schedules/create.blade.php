@@ -8,6 +8,8 @@
 
 @section('content')
     <div class="container">
+        @include('messages.messages')
+
         <form action="{{route('addedSchedule')}}" method="post">
             @csrf
 

@@ -21,10 +21,16 @@ class ClassScheduleRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'group' => 'required',
+            'subject' => 'required',
+            'room' => 'required',
+            'teacher' => 'required',
+            'date' => 'required',
+            'start_hour' => 'required',
+            'end_hour' => 'required'
         ];
     }
 }
