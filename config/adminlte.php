@@ -238,8 +238,44 @@ return [
 
         // Sidebar items:
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Группы',
+            'url'  => '/groups',
+            'icon' => 'far fa-folder-open',
+        ],
+        [
+            'text' => 'Учители',
+            'url'  => '/teachers',
+            'icon' => 'far fa-user',
+        ],
+        [
+            'text' => 'Ученики',
+            'url'  => '/students',
+            'icon' => 'far fa-user',
+        ],
+        [
+            'text' => 'Степени',
+            'url'  => '/degree',
+            'icon' => 'far fa-graduation-cap',
+        ],
+        [
+            'text' => 'Тип комнаты',
+            'url'  => '/type-of-rooms',
+            'icon' => 'far fa-graduation-cap',
+        ],
+        [
+            'text' => 'Комнаты',
+            'url'  => '/rooms',
+            'icon' => 'far fa-graduation-cap',
+        ],
+        [
+            'text' => 'Предметы',
+            'url'  => '/subjects',
+            'icon' => 'far fa-graduation-cap',
+        ],
+        [
+            'text' => 'Типы предметов',
+            'url'  => '/subject-types',
+            'icon' => 'far fa-graduation-cap',
         ],
         [
             'text' => 'blog',
