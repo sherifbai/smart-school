@@ -43,6 +43,7 @@ class ClassScheduleController extends Controller
         $schedule->room_id = $req->input('room');
         $schedule->start_hour = $req->input('start_hour');
         $schedule->end_hour = $req->input('end_hour');
+        $schedule->date = $req->input('date');
 
         $schedule->save();
 

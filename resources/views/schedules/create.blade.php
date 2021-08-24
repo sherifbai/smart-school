@@ -61,6 +61,11 @@
                 <input type="text" name="end_hour" placeholder="Введите конец урока" class="form-control">
             </div>
 
+            <div class="form-group">
+                <label for="date">Дата</label>
+                <input type="date" name="date" placeholder="Введите конец урока" class="form-control">
+            </div>
+
             <input type="submit" class="btn btn-primary" value="Добавить">
         </form>
     </div>
