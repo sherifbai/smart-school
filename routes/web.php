@@ -91,3 +91,4 @@ Route::put('/subjects/update/{id}', [SubjectController::class, 'updatedSubject']
 Route::get('/schedules', [ClassScheduleController::class, 'index'])->name('indexSchedule');
 Route::get('/schedules/add', [ClassScheduleController::class, 'addSchedule'])->name('addSchedule');
 Route::post('/schedules/add', [ClassScheduleController::class, 'addedSchedule'])->name('addedSchedule');
+Route::delete('/schedules/delete/{id}', [ClassScheduleController::class, 'deleteSchedule'])->name('deleteSchedule');

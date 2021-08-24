@@ -18,9 +18,9 @@ class ClassScheduleController extends Controller
 {
     public function index(): Factory|View|Application
     {
-        $schedule = ClassSchedule::all();
+        $schedules = ClassSchedule::all();
 
-        return view('schedules.index', compact('schedule'));
+        return view('schedules.index', compact('schedules'));
     }
 
     public function addSchedule(): Factory|View|Application
@@ -48,5 +48,14 @@ class ClassScheduleController extends Controller
         $schedule->save();
 
         return redirect()->route('indexSchedule')->with('success', 'Расписание добавлено');
+    }
+
+    public function deleteSchedule($id): RedirectResponse
+    {
+        $schedule = ClassSchedule::query()->findOrFail($id);
+
+        $schedule->delete();
+
+        return redirect()->route('indexSchedule')->with('success', 'Расписание успешно удалено');
     }
 }

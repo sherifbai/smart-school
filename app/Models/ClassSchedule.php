@@ -48,7 +48,7 @@ class ClassSchedule extends Model
         return $this->belongsTo(Teacher::class);
     }
 
-    public function subjects(): BelongsTo
+    public function subject(): BelongsTo
     {
         return $this->belongsTo(Subject::class);
     }

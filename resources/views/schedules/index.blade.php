@@ -19,22 +19,30 @@
             <thead>
             <tr>
                 <th scope="col">Предмет</th>
+                <th scope="col">Начало</th>
+                <th scope="col">Конец</th>
+                <th scope="col">Дата</th>
                 <th scope="col">Учитель</th>
                 <th scope="col">Группа</th>
                 <th scope="col">Комната</th>
+                <th scope="col">Операции</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($groups as $el)
+            @foreach($schedules as $el)
                 <tr>
-                    <td>{{$el->name}}</td>
-                    <td>{{$el->language}}</td>
-                    <td>{{$el->type}}</td>
+                    <td>{{$el->subject->name}}</td>
+                    <td>{{$el->start_hour}}</td>
+                    <td>{{$el->end_hour}}</td>
+                    <td>{{$el->date}}</td>
+                    <td>{{$el->teacher->first_name}} {{$el->teacher->last_name}}</td>
+                    <td>{{$el->group->name}}</td>
+                    <td>{{$el->room->number}}</td>
                     <td>
-                        <a href="{{route('updateGroup', $el->id)}}" class="btn btn-primary">Редактировать</a>
-                        <form class="d-inline-block" method="post" action="{{route('deleteGroup', $el->id)}}">
+                        <a href="#" class="btn btn-primary">Редактировать</a>
+                        <form class="d-inline-block" method="post" action="{{route('deleteSchedule', $el->id)}}">
                             @csrf
-                            <input type="hidden" name="_method" value="delete">
+                            @method('delete')
                             <button class="btn btn-danger">Удалить</button>
                         </form>
                     </td>
