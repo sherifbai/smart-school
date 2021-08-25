@@ -11,7 +11,7 @@ class GroupMembersRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
@@ -24,7 +24,9 @@ class GroupMembersRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'group_id' => 'required'
         ];
     }
 }

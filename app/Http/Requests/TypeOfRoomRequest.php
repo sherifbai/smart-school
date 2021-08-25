@@ -24,7 +24,7 @@ class TypeOfRoomRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
         ];
     }
 }

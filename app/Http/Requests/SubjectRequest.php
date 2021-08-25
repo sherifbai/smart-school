@@ -24,7 +24,9 @@ class SubjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required',
+            'alias' => 'required',
+            'subject_type_id' => 'required',
         ];
     }
 }
