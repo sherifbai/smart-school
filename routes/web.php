@@ -22,9 +22,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ClassScheduleController::class, 'index']);
+Route::get('/search', [ClassScheduleController::class, 'search'])->name('search');
+Route::get('/searched', [ClassScheduleController::class, 'searched'])->name('searched');
 
 Route::get('/groups', [GroupController::class, 'index'])->name('indexGroup');
 Route::get('/groups/add', [GroupController::class, 'addGroup'])->name('addGroup');
@@ -92,3 +92,5 @@ Route::get('/schedules', [ClassScheduleController::class, 'index'])->name('index
 Route::get('/schedules/add', [ClassScheduleController::class, 'addSchedule'])->name('addSchedule');
 Route::post('/schedules/add', [ClassScheduleController::class, 'addedSchedule'])->name('addedSchedule');
 Route::delete('/schedules/delete/{id}', [ClassScheduleController::class, 'deleteSchedule'])->name('deleteSchedule');
+Route::get('/schedules/update/{id}', [ClassScheduleController::class, 'updateSchedule'])->name('updateSchedule');
+Route::put('/schedules/update/{id}', [ClassScheduleController::class, 'updatedSchedule'])->name('updatedSchedule');

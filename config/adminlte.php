@@ -188,7 +188,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -231,6 +231,7 @@ return [
             'url'  => '/schedules',
             'icon' => 'far fa-graduation-cap',
         ],
+        ['header' => 'Данные'],
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
@@ -243,24 +244,40 @@ return [
 
         // Sidebar items:
         [
+            'text'    => 'Работа с учителями',
+            'icon'    => 'fas fa-fw fa-share',
+            'submenu' => [
+                [
+                    'text' => 'Список учителей',
+                    'icon'    => 'fas fa-fw fa-share',
+                    'url'  => '/teachers',
+                ],
+                [
+                    'text' => 'Добавление учителя',
+                    'icon'    => 'fas fa-fw fa-share',
+                    'url'  => '/teachers/add',
+                ],
+                [
+                    'text' => 'Список степеней',
+                    'icon'    => 'fas fa-fw fa-share',
+                    'url'  => '/degree',
+                ],
+                [
+                    'text' => 'Добавление степени',
+                    'icon'    => 'fas fa-fw fa-share',
+                    'url'  => '/degree/add',
+                ],
+            ],
+        ],
+        [
             'text' => 'Группы',
             'url'  => '/groups',
             'icon' => 'far fa-folder-open',
         ],
         [
-            'text' => 'Учители',
-            'url'  => '/teachers',
-            'icon' => 'far fa-user',
-        ],
-        [
             'text' => 'Ученики',
             'url'  => '/students',
-            'icon' => 'far fa-user',
-        ],
-        [
-            'text' => 'Степени',
-            'url'  => '/degree',
-            'icon' => 'far fa-graduation-cap',
+            'icon' => 'far fa-users',
         ],
         [
             'text' => 'Тип комнаты',
@@ -292,44 +309,6 @@ return [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
         ],
         ['header' => 'labels'],
         [

@@ -8,6 +8,9 @@
             <h1>Таблица групп</h1>
         </div>
         <div>
+            <a href="{{route('search')}}" class="btn btn-primary">Поиск</a>
+        </div>
+        <div>
             <a href="{{route('addSchedule')}}" class="btn btn-success">Добавить</a>
         </div>
     </div>
@@ -39,7 +42,7 @@
                     <td>{{$el->group->name}}</td>
                     <td>{{$el->room->number}}</td>
                     <td>
-                        <a href="#" class="btn btn-primary">Редактировать</a>
+                        <a href="{{route('updateSchedule', $el->id)}}" class="btn btn-primary">Редактировать</a>
                         <form class="d-inline-block" method="post" action="{{route('deleteSchedule', $el->id)}}">
                             @csrf
                             @method('delete')
